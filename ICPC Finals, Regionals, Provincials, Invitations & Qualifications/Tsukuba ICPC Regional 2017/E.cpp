@@ -28,7 +28,7 @@ int main() {
     scanf("%d%d",&n,&k);
     scanf("%s",s+1);
     scanf("%s",t+1);
-    for(int i=1;i<=n;i++) {
+    for(int i=1; i<=n; i++) {
         b[i]=b[i-1]+(t[i]!=t[i-1]);
         update(i,2*dp[i-1]-b[i],1,1,n);
         if(s[i]==t[i]) dp[i]=dp[i-1];

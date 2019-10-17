@@ -4,7 +4,7 @@ int main() {
     int n,t,h;
     scanf("%d%d",&n,&t);
     long long b=0,j=0;
-    for(int i=0;i<n;i++) {
+    for(int i=0; i<n; i++) {
         scanf("%d",&h);
         b+=h;
         j=max(j,1ll*h);

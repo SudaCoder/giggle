@@ -6,10 +6,10 @@ map<string,int> id;
 struct Edge
 {
     int to,nxt,p,c;
-}edge[maxn];
+} edge[maxn];
 
 int pres[maxn],cost[maxn],in[maxn],
-head[maxn],tot;
+    head[maxn],tot;
 
 void init()
 {
@@ -35,7 +35,7 @@ void spfa(int x)
     {
         int u=quu.front();
         quu.pop();
-        for(int i=head[u];i!=-1;i=edge[i].nxt)
+        for(int i=head[u]; i!=-1; i=edge[i].nxt)
         {
             int v=edge[i].to;
             if(cost[u]+edge[i].c<cost[v])
@@ -46,10 +46,10 @@ void spfa(int x)
             }
             else if(cost[u]+edge[i].c==cost[v]
                     &&pres[v]<pres[u]+edge[i].p)
-                    {
-                        pres[v]=pres[u]+edge[i].p;
-                        quu.push(v);
-                    }
+            {
+                pres[v]=pres[u]+edge[i].p;
+                quu.push(v);
+            }
         }
     }
 }
@@ -64,7 +64,7 @@ int main()
     m=0;
     cin>>B>>n;
     init();
-    for(int i=0;i<n;i++)
+    for(int i=0; i<n; i++)
     {
         cin>>a>>b>>t>>c>>v;
         int ida,idb;
@@ -77,9 +77,9 @@ int main()
         addedge(idb,ida,c,v);
     }
 
-    for(int i=1;i<=m;i++)
+    for(int i=1; i<=m; i++)
         cost[i]=pres[i]=1e9+7;
-    for(int i=1;i<=m;i++)
+    for(int i=1; i<=m; i++)
         if(in[i]==0)
             spfa(i);
 
@@ -93,12 +93,12 @@ int main()
     */
 
     dp[0]=0;
-    for(int i=1;i<=m;i++)
-        for(int j=B;j>=cost[i];j--)
+    for(int i=1; i<=m; i++)
+        for(int j=B; j>=cost[i]; j--)
             dp[j]=max(dp[j],dp[j-cost[i]]+pres[i]);
 
     int ans1=0,ans2=0;
-    for(int i=0;i<=B;i++)
+    for(int i=0; i<=B; i++)
     {
         if(dp[i]>ans1)
         {

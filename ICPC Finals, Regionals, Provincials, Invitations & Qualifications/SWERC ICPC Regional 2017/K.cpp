@@ -15,8 +15,8 @@ int sgn(double x)
 struct Point
 {
     double x,y;
-    Point(){}
-    Point(double _x,double _y):x(_x),y(_y){}
+    Point() {}
+    Point(double _x,double _y):x(_x),y(_y) {}
     Point operator -(const Point &rhs) const
     {
         return Point(x-rhs.x,y-rhs.y);
@@ -29,7 +29,7 @@ struct Point
     {
         return hypot(x-rhs.x,y-rhs.y);
     }
-}point[maxn],vertex[maxn];
+} point[maxn],vertex[maxn];
 
 bool cmp_x(const Point &a,const Point &b)
 {
@@ -40,17 +40,17 @@ int Andrew()
 {
     sort(point,point+n,cmp_x);
     int k=0;
-    for(int i=0;i<n;i++)
+    for(int i=0; i<n; i++)
     {
         while(k>1&&(vertex[k-1]-vertex[k-2]).cross
-        (point[i]-vertex[k-1])<=0) k--;
+                (point[i]-vertex[k-1])<=0) k--;
         vertex[k++]=point[i];
     }
     int m=k;
-    for(int i=n-2;i>=0;i--)
+    for(int i=n-2; i>=0; i--)
     {
         while(k>m&&(vertex[k-1]-vertex[k-2]).cross
-        (point[i]-vertex[k-1])<=0) k--;
+                (point[i]-vertex[k-1])<=0) k--;
         vertex[k++]=point[i];
     }
     if(k>1) k--;
@@ -71,12 +71,12 @@ double get_min_width(int k)
         return 0;
     double res=2.0*r;
     int u=2;
-    for(int i=0;i<k;i++)
+    for(int i=0; i<k; i++)
     {
         Point temp=vertex[i+1]-vertex[i];
         while((vertex[u+1]-vertex[i]).cross(temp)
-              -(vertex[u]-vertex[i]).cross(temp)<=0)
-                u=(u+1)%k;
+                -(vertex[u]-vertex[i]).cross(temp)<=0)
+            u=(u+1)%k;
         res=min(res,get_hight(vertex[i],vertex[i+1],vertex[u]));
     }
     return res;
@@ -85,7 +85,7 @@ double get_min_width(int k)
 int main()
 {
     scanf("%d%d",&n,&r);
-    for(int i=0;i<n;i++)
+    for(int i=0; i<n; i++)
         scanf("%lf%lf",&point[i].x,&point[i].y);
     printf("%.16f",get_min_width(Andrew()));
     return 0;
