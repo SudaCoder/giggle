@@ -4,7 +4,7 @@ using ll = long long;
 int n, m;
 const int N = 3e5+9;
 struct P {
-  ll x, y, id;
+    ll x, y, id;
 } p[N], q[N];
 
 bool cmp (P a, P b) {

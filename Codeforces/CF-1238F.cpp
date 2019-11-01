@@ -4,7 +4,7 @@ const int N = 3e5 + 9;
 using ll = long long;
 int Tcase, n, deg[N], dp[N], ans;
 vector<int> g[N];
-void init(){
+void init() {
     ans = 0;
     for (int i = 0; i <= n; i++) {
         g[i].clear();
@@ -33,7 +33,8 @@ int main() {
             scanf("%d %d", &a, &b);
             g[a].push_back(b);
             g[b].push_back(a);
-            deg[a] ++; deg[b] ++;
+            deg[a] ++;
+            deg[b] ++;
         }
         dfs(1, 0);
         printf("%d\n", ans);
