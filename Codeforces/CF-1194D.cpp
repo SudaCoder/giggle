@@ -4,17 +4,21 @@ using ll = long long;
 int Tcase = 0;
 
 int main() {
-    scanf("%d", &Tcase);
-    while( Tcase-- ) {
-        int n, k;
-        scanf("%d%d", &n, &k);
-        if( k % 3 ) {
-            if (n % 3) puts("changchang");
-            else puts("niuniu");
-        } else {
-            n %= k + 1;
-            if (n == k || n % 3) puts("changchang");
-            else puts("niuniu");
-        }
+  scanf("%d", &Tcase);
+  while (Tcase--) {
+    int n, k;
+    scanf("%d%d", &n, &k);
+    if (k % 3) {
+      if (n % 3)
+        puts("changchang");
+      else
+        puts("niuniu");
+    } else {
+      n %= k + 1;
+      if (n == k || n % 3)
+        puts("changchang");
+      else
+        puts("niuniu");
     }
+  }
 }
