@@ -10,15 +10,15 @@ int main() {
     scanf("%d%d", &n, &k);
     if (k % 3) {
       if (n % 3)
-        puts("changchang");
+        puts("Alice");
       else
-        puts("niuniu");
+        puts("Bob");
     } else {
       n %= k + 1;
       if (n == k || n % 3)
-        puts("changchang");
+        puts("Alice");
       else
-        puts("niuniu");
+        puts("Bob");
     }
   }
 }
