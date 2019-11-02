@@ -11,18 +11,18 @@ bool isPrime(int x) {
   return 0;
 }
 
-long long ___gcd(long long a, long long b) {
-  return b ? ___gcd(b, a % b) : a;
-}
+long long ___gcd(long long a, long long b) { return b ? ___gcd(b, a % b) : a; }
 
 int t, x;
 int main() {
   scanf("%d", &t);
-  while(t--) {
+  while (t--) {
     scanf("%d", &x);
     int p = x, q = x + 1;
-    for (; isPrime(p); p--);
-    for (; isPrime(q); q++);
+    for (; isPrime(p); p--)
+      ;
+    for (; isPrime(q); q++)
+      ;
     long long up = 1LL * p * q - 2LL * (p + q) + 2 + 2LL * x;
     long long down = 2LL * p * q;
     long long gcd = ___gcd(up, down);

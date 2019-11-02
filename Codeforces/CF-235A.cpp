@@ -3,9 +3,7 @@
 using namespace std;
 long long n, ans;
 
-long long gcd(long long a, long long b) {
-  return b ? gcd(b, a % b) : a;
-}
+long long gcd(long long a, long long b) { return b ? gcd(b, a % b) : a; }
 
 long long lcm(long long a, long long b, long long c) {
   long long ans = a / gcd(a, b) * b;
@@ -13,11 +11,9 @@ long long lcm(long long a, long long b, long long c) {
   return ans;
 }
 
-long long max(long long a, long long b) {
-  return a > b ? a : b;
-}
+long long max(long long a, long long b) { return a > b ? a : b; }
 
-int main () {
+int main() {
   scanf("%lld", &n);
   ans = 0;
   long long s = max(1, n - 100);
