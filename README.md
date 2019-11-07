@@ -1,6 +1,11 @@
 # giggle
 
 [![gitter badge](https://img.shields.io/gitter/room/soochow-university/giggle)](https://gitter.im/soochow-university/giggle#)
+![GitHub](https://img.shields.io/github/license/SudaCoder/giggle)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/m/sudacoder/giggle)
+![GitHub contributors](https://img.shields.io/github/contributors-anon/sudacoder/giggle)
+![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/sudacoder/giggle)
+
 
 ## Introduction
 
