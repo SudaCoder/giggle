@@ -1,3 +1,7 @@
+# giggle
+
+[![gitter badge](https://img.shields.io/gitter/room/soochow-university/giggle)](https://gitter.im/soochow-university/giggle#)
+
 ## Introduction 
 
 This is a repo consisting of code accepted by different OJ. Hope this repo will help others communicate and learn. 
