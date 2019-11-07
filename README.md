@@ -6,7 +6,6 @@
 ![GitHub contributors](https://img.shields.io/github/contributors-anon/sudacoder/giggle)
 ![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/sudacoder/giggle)
 
-
 ## Introduction
 
 This is a repo consisting of code accepted by different OJ. Hope this repo will
