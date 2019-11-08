@@ -24,7 +24,7 @@ int main() {
   }
   sort(e, e + m, cmp);
   int cnt = 0;
-  for (int i = 0; i < k; i++) {
+  for (int i = 0; i < min(k, m); i++) {
     p[cnt++] = e[i].u;
     p[cnt++] = e[i].v;
   }
