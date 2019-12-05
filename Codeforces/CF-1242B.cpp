@@ -1,9 +1,9 @@
 #include <cstdio>
+#include <cstring>
 #include <iostream>
 #include <vector>
-#include <cstring>
- 
-const int N = 1e5+9;
+
+const int N = 1e5 + 9;
 using namespace std;
 int n, m, u, v, head[N], cnt, fa[N], siz[N], pa[N];
 
@@ -20,7 +20,9 @@ void init() {
   memset(head, -1, sizeof head);
   cnt = 0;
   for (int i = 1; i <= n; i++) {
-    siz[i] = 1; fa[i] = i; pa[i] = 0;
+    siz[i] = 1;
+    fa[i] = i;
+    pa[i] = 0;
   }
 }
 
@@ -37,28 +39,30 @@ int main() {
   init();
   for (int i = 0; i < m; i++) {
     scanf("%d%d", &u, &v);
-    if (u < v) swap(u, v);
+    if (u < v)
+      swap(u, v);
     ad(u, v);
   }
   int ans = n - 1;
   vector<int> zeros;
   for (int i = 1; i <= n; i++) {
     for (int j = head[i]; ~j; j = e[j].nxt) {
-      pa[Find(e[j].v)]++; 
+      pa[Find(e[j].v)]++;
     }
     vector<int> tmp;
-    for (auto v: zeros) {
+    for (auto v : zeros) {
       // printf("%d %d %d %d\n", i, v, siz[v], pa[v]);
       if (siz[v] > pa[v]) {
         Union(v, i);
-        ans --;
-      } else tmp.push_back(v);
+        ans--;
+      } else
+        tmp.push_back(v);
       pa[v] = 0;
     }
     zeros = tmp;
     zeros.push_back(i);
   }
-  
+
   printf("%d\n", ans);
   return 0;
 }
