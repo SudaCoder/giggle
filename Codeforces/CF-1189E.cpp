@@ -6,7 +6,7 @@ int n, p, k, x;
 unordered_map<int, int> mp;
 
 inline int cal(int x) {
-  return x * ((1LL*x*x%p*x%p-k+p)%p) % p;
+  return x * ((1LL * x * x % p * x % p - k + p) % p) % p;
 }
 
 int main() {
@@ -15,7 +15,8 @@ int main() {
   for (int i = 0; i < n; i++) {
     scanf("%d", &x);
     int v = cal(x);
-    ans += mp[v]; mp[v] ++;
+    ans += mp[v];
+    mp[v]++;
   }
   printf("%lld\n", ans);
   return 0;
