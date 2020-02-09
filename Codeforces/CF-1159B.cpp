@@ -9,7 +9,7 @@ int main() {
   int ans = 1e9;
   for (int i = 1; i <= n; i++) {
     scanf("%d", &x);
-    ans = min(ans, x/max(i-1, n-i));
+    ans = min(ans, x / max(i - 1, n - i));
   }
   printf("%d\n", ans);
   return 0;
