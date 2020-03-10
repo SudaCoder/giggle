@@ -8,7 +8,7 @@ int n, a[N], b[N], pos[N], mx;
 
 int main() {
     cin >> n;
-    for (int i = 1; i <= n; ++i) { 
+    for (int i = 1; i <= n; ++i) {
         cin >> a[i];
         pos[a[i]] = i;
     }
