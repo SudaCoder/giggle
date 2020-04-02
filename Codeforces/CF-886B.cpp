@@ -8,7 +8,7 @@ int n, a[N], vis[N], ans;
 
 int main() {
     scanf("%d", &n);
-    for (int i = 1; i <= n; ++i) 
+    for (int i = 1; i <= n; ++i)
         scanf("%d", &a[i]);
     for (int i = n; i; --i) {
         if (vis[a[i]] == 0)

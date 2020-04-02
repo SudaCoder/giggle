@@ -43,7 +43,7 @@ int main() {
         return 0;
     }
     ans = 4;
-    for (int i = p[1]; i <= p[2]; ++i) 
+    for (int i = p[1]; i <= p[2]; ++i)
         ans += s[i] == '|';
     printf("%d\n", ans);
     return 0;

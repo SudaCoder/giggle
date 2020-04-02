@@ -30,7 +30,7 @@ int main() {
     a[0] -= 3 * n;
     a[1] -= 2 * n;
     a[2] -= 2 * n;
-    for (int i = 0; i < 7; ++i) 
+    for (int i = 0; i < 7; ++i)
         ans = max(ans, gao(i));
     ans += 7 * n;
     cout << ans << endl;

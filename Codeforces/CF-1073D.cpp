@@ -22,7 +22,7 @@ void get(long long T, long long &tot, int& cnt) {
 
 int main() {
     scanf("%d%lld", &n, &T);
-    for (int i = 1; i <= n; ++i) { 
+    for (int i = 1; i <= n; ++i) {
         scanf("%d", &a[i]);
         mn = min(mn, a[i]);
     }
