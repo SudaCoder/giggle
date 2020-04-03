@@ -5,12 +5,12 @@
 #include <vector>
 using namespace std;
 const int maxn = 20;
-struct node{
+struct node {
     int lchild,rchild;
 } tnode[maxn];
 bool notroot[maxn] = {false};
 int n,num = 0;
-void print(int id){
+void print(int id) {
     printf("%d",id);
     num++;
     if(num < n)
@@ -20,14 +20,14 @@ void print(int id){
         printf("\n");
     }
 }
-void inorder(int root){
+void inorder(int root) {
     if(root == -1)
         return ;
     inorder(tnode[root].lchild);
     print(root);
     inorder(tnode[root].rchild);
 }
-void bfs(int root){
+void bfs(int root) {
     queue<int> q;
     q.push(root);
     while (!q.empty())
@@ -41,29 +41,29 @@ void bfs(int root){
             q.push(tnode[cur].rchild);
     }
 }
-void postorder(int root){
+void postorder(int root) {
     if(root == -1) return;
     postorder(tnode[root].lchild);
     postorder(tnode[root].rchild);
     swap(tnode[root].lchild,tnode[root].rchild);
 }
-int str_to_num(char c){
+int str_to_num(char c) {
     if(c == '-') return -1;
-    else{
+    else {
         notroot[c-'0'] = true;
         return c-'0';
     }
 }
-int findroot(){
-    for(int i=0;i<n;i++){
+int findroot() {
+    for(int i=0; i<n; i++) {
         if(notroot[i] == false)
             return i;
     }
 }
-int main(){
+int main() {
     char lchild,rchild;
     scanf("%d",&n);
-    for(int i=0;i<n;i++){
+    for(int i=0; i<n; i++) {
         scanf("%*c%c %c",&lchild,&rchild);
         tnode[i].lchild = str_to_num(lchild);
         tnode[i].rchild = str_to_num(rchild);
