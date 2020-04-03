@@ -29,7 +29,7 @@ int main() {
             sum[j + 1] += tmp;
         }
     }
-    for (int i = 1; i <= n; ++i) 
+    for (int i = 1; i <= n; ++i)
         ans = max(ans, sum[i]);
     printf("%d\n", ans);
     return 0;
