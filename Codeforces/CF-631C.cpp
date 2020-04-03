@@ -6,7 +6,7 @@ const int N = 2e5 + 10;
 
 struct node {
     int t, r;
-}op[N];
+} op[N];
 
 int n, m, a[N], ans[N], mx;
 
@@ -15,7 +15,7 @@ deque<int> que;
 
 int main() {
     scanf("%d%d\n", &n, &m);
-    for (int i = 1; i <= n; ++i) 
+    for (int i = 1; i <= n; ++i)
         scanf("%d", &a[i]);
     for (int i = 1; i <= m; ++i) {
         scanf("%d%d", &op[i].t, &op[i].r);
@@ -56,7 +56,7 @@ int main() {
             que.pop_back();
         }
     }
-    for (int i = 1; i <= n; ++i) 
+    for (int i = 1; i <= n; ++i)
         printf("%d%c", ans[i], " \n"[i == n]);
     return 0;
 }
