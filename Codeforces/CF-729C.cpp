@@ -9,7 +9,7 @@ struct car {
     bool operator<(const car &rhs) const {
         return c < rhs.c;
     }
-}a[N];
+} a[N];
 
 int n, k, s, t;
 int g[N];
@@ -33,7 +33,7 @@ int main() {
     for (int i = 1; i <= n; ++i) {
         a[i].v = max(a[i].v, a[i - 1].v);
     }
-    for (int i = 1; i <= k; ++i) 
+    for (int i = 1; i <= k; ++i)
         scanf("%d", &g[i]);
     g[++k] = 0;
     g[++k] = s;

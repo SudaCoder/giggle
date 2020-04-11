@@ -12,7 +12,7 @@ struct node {
     bool operator<(const node &rhs) const {
         return p < rhs.p;
     }
-}coin[N], diamond[N];
+} coin[N], diamond[N];
 
 char op[3];
 
