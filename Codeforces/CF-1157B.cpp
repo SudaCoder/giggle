@@ -17,7 +17,7 @@ int main() {
             s[i] = '0' + f[x];
             for (int j = i + 1; j < n; ++j) {
                 int x = s[j] - '0';
-                if (f[x] >= x) 
+                if (f[x] >= x)
                     s[j] = '0' + f[x];
                 else
                     break;
