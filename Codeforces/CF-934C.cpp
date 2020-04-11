@@ -1,3 +1,7 @@
+/**
+ * update by wrj
+ **/ 
+
 #include <iostream>
 #include <vector>
 const int N = 2e3+9;
@@ -17,4 +21,3 @@ int main () {
   }
   printf("%d\n", dp[4][n]);
   return 0;
-}
