@@ -14,8 +14,8 @@ struct car {
 int n, k, s, t;
 int g[N];
 
-bool check(int mid) {
-    int v = a[mid].v, time = 0;
+bool check(int v) {
+    int time = 0;
     for (int i = 1; i < k; ++i) {
         int d = g[i + 1] - g[i];
         if (d > v) return 0;
@@ -29,25 +29,28 @@ int main() {
     for (int i = 1; i <= n; ++i) {
         scanf("%d%d", &a[i].c, &a[i].v);
     }
-    sort (a + 1, a + n + 1);
-    for (int i = 1; i <= n; ++i) {
-        a[i].v = max(a[i].v, a[i - 1].v);
-    }
     for (int i = 1; i <= k; ++i) 
         scanf("%d", &g[i]);
     g[++k] = 0;
     g[++k] = s;
     sort(g + 1, g + k + 1);
-    int l = 1, r = n, ans = -1;
+    int l = 0, r = 1e9, minv = 2e9;
     while (l <= r) {
         int mid = l + r >> 1;
         if (check(mid)) {
-            ans = a[mid].c;
+            minv = mid;
             r = mid - 1;
         }
         else
             l = mid + 1;
     }
+    int ans = 2e9;
+    for (int i = 1; i <= n; ++i) {
+        if (a[i].v >= minv) {
+            ans = min(ans, a[i].c);
+        }
+    }
+    if (ans == 2e9) ans = -1;
     printf("%d\n", ans);
     return 0;
 }
