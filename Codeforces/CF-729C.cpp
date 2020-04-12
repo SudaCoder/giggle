@@ -9,7 +9,7 @@ struct car {
     bool operator<(const car &rhs) const {
         return c < rhs.c;
     }
-}a[N];
+} a[N];
 
 int n, k, s, t;
 int g[N];
@@ -29,7 +29,7 @@ int main() {
     for (int i = 1; i <= n; ++i) {
         scanf("%d%d", &a[i].c, &a[i].v);
     }
-    for (int i = 1; i <= k; ++i) 
+    for (int i = 1; i <= k; ++i)
         scanf("%d", &g[i]);
     g[++k] = 0;
     g[++k] = s;
