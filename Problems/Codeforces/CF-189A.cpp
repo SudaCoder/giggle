@@ -1,9 +1,9 @@
 //189A
 #include <bits/stdc++.h>
 using namespace std;
- 
+
 int dp[4010];
- 
+
 int main() {
     int n, a, b, c;
     scanf("%d%d%d%d", &n, &a, &b, &c);
@@ -19,6 +19,6 @@ int main() {
             dp[i + c] = max(dp[i + c], dp[i] + 1);
     }
     printf("%d\n", dp[n]);
- 
+
     return 0;
 }

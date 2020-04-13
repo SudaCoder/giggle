@@ -14,7 +14,7 @@ int find(int x) {
 
 int unite(int x, int y) {
     int fx = find(x), fy = find(y);
-    if (fx == fy)   
+    if (fx == fy)
         return 0;
     fa[fx] = fy;
     return 1;
@@ -28,7 +28,7 @@ int main() {
         fa[i] = i;
     }
     for (int i = 1; i < n; ++i) {
-        if (a[i] > l && a[i + 1] > l)  
+        if (a[i] > l && a[i + 1] > l)
             cnt += unite(i, i + 1);
     }
     while (m--) {

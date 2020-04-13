@@ -8,7 +8,7 @@ vector<int> v;
 
 int main() {
     scanf("%d%d", &n, &B);
-    for (int i = 1; i <= n; ++i) 
+    for (int i = 1; i <= n; ++i)
         scanf("%d", &a[i]);
     for (int i = 1; i <= n; ++i) {
         if (a[i] % 2 == 0)

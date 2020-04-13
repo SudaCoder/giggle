@@ -10,7 +10,7 @@ int main() {
     cin >> T;
     while (T--) {
         cin >> n >> m >> k;
-        for (int i = 1; i <= n; ++i) 
+        for (int i = 1; i <= n; ++i)
             cin >> h[i];
         bool flag = true;
         for (int i = 1; i < n; ++i) {

@@ -8,9 +8,9 @@ int s[N], c[N], n, ans = 1e9;
 
 int main() {
     scanf("%d", &n);
-    for (int i = 1; i <= n; ++i) 
+    for (int i = 1; i <= n; ++i)
         scanf("%d", &s[i]);
-    for (int i = 1; i <= n; ++i) 
+    for (int i = 1; i <= n; ++i)
         scanf("%d", &c[i]);
     c[0] = 1e9;
     for (int j = 2; j < n; ++j) {
@@ -23,10 +23,10 @@ int main() {
             if (s[j] < s[k] && c[k] < c[right])
                 right = k;
         }
-        if (left != 0 && right != 0) 
+        if (left != 0 && right != 0)
             ans = min(ans, c[left] + c[j] + c[right]);
     }
-    if (ans == 1e9) 
+    if (ans == 1e9)
         puts("-1");
     else
         printf("%d\n", ans);
