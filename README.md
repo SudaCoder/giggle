@@ -8,7 +8,8 @@
 
 ## Introduction
 
-This repo will update with useful tech and knowledge when we learn algorithm in ACM training team.
+This repo will update with useful tech and knowledge when we learn algorithm in
+ACM training team.
 
 ## Code Review Notes
 
