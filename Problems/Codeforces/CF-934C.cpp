@@ -21,3 +21,4 @@ int main() {
   }
   printf("%d\n", dp[4][n]);
   return 0;
+}
