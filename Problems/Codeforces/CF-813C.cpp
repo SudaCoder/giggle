@@ -1,43 +1,38 @@
-#include <cstdio>
-#include <iostream>
-#include <vector>
-
-const int N = 2e5 + 9;
+//813C
+#include <bits/stdc++.h>
 using namespace std;
-int n, x, dep[N], lev[N];
-vector<int> mp[N];
-bool vis[N];
 
-int dfs(int u, int fa) {
-  int ans = 0;
-  if (u == x)
-    vis[u] = 1;
-  for (int i = 0; i < mp[u].size(); i++) {
-    int v = mp[u][i];
-    if (v == fa)
-      continue;
-    dep[v] = dep[u] + 1;
-    ans = max(dfs(v, u) + 1, ans);
-    vis[u] |= vis[v];
-  }
-  return lev[u] = ans;
+const int N = 2e5 + 10;
+
+vector<int> edge[N];
+
+int n, x, dep[N], maxdep[N], ans, fa[N];
+
+void dfs(int rt, int pre, int d) {
+    dep[rt] = maxdep[rt] = d;
+    fa[rt] = pre;
+    for (int i = 0; i < edge[rt].size(); ++i) {
+        int j = edge[rt][i];
+        if (j == pre) continue;
+        dfs(j, rt, d + 1);
+        maxdep[rt] = max(maxdep[rt], maxdep[j]);
+    }
 }
 
 int main() {
-  scanf("%d%d", &n, &x);
-  int u, v;
-  for (int i = 1; i < n; i++) {
-    scanf("%d%d", &u, &v);
-    mp[u].push_back(v);
-    mp[v].push_back(u);
-  }
-  dfs(1, 0);
-  int ans = 0;
-  for (int i = 1; i <= n; i++) {
-    if (dep[i] >= 1 + dep[x] / 2 && vis[i]) {
-      ans = max(ans, lev[i] + dep[i]);
+    scanf("%d%d", &n, &x);
+    for (int i = 1; i < n; ++i) {
+        int a, b;
+        scanf("%d%d", &a, &b);
+        edge[a].push_back(b);
+        edge[b].push_back(a);
     }
-  }
-  printf("%d\n", ans << 1);
-  return 0;
+    dfs(1, 0, 0);
+    int p = x;
+    while (dep[x] - dep[p] < dep[p]) {
+        ans = max(ans, maxdep[p]);
+        p = fa[p];
+    }
+    printf("%d\n", 2 * ans);
+    return 0;
 }
