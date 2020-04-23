@@ -7,7 +7,7 @@ long long n, k;
 int a[200010];
 long long ans = 1;
 
-vector<long long> fac; 
+vector<long long> fac;
 
 int main() {
     cin >> n >> k;
