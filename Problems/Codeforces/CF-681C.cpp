@@ -2,10 +2,10 @@
 #include <iostream>
 #include <queue>
 #include <string>
- 
+
 using namespace std;
- 
-int n; 
+
+int n;
 char s[3][15] = {"insert", "getMin", "removeMin"}, temp[15];
 
 vector<int> anss, ansnum;
@@ -21,7 +21,7 @@ int main() {
             q.push(x);
             anss.push_back(0);
             ansnum.push_back(x);
-        } 
+        }
         else if (temp[0] == 'g') {
             int x;
             scanf("%d", &x);
@@ -37,7 +37,7 @@ int main() {
             }
             anss.push_back(1);
             ansnum.push_back(x);
-        } 
+        }
         else if (temp[0] == 'r') {
             if (q.empty()) {
                 anss.push_back(0);
