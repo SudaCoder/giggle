@@ -9,11 +9,11 @@ int n, x;
 struct point {
     int x, y, id;
     bool operator<(const point &rhs) const {
-        if (x == rhs.x) 
+        if (x == rhs.x)
             return y < rhs.y;
         return x < rhs.x;
     }
-}a[N];
+} a[N];
 
 bool oneline(int i, int j, int k) {
     return 1LL * (a[i].x - a[j].x) * (a[i].y - a[k].y) == 1LL * (a[i].x - a[k].x) * (a[i].y - a[j].y);

@@ -23,7 +23,7 @@ int main() {
             if (len != lent) flag = 0;
             else {
                 for (int i = 1; i <= len; ++i) {
-                    if (s[i] == '?' && good[t[i] - 'a'] == 0) 
+                    if (s[i] == '?' && good[t[i] - 'a'] == 0)
                         flag = 0;
                     if (s[i] != '?' && s[i] != t[i])
                         flag = 0;
@@ -34,13 +34,13 @@ int main() {
             if (len - 1 > lent) flag = 0;
             for (int i = 1; i <= lent; ++i) {
                 if (i < pos) {
-                    if (s[i] == '?' && good[t[i] - 'a'] == 0) 
+                    if (s[i] == '?' && good[t[i] - 'a'] == 0)
                         flag = 0;
                     if (s[i] != '?' && s[i] != t[i])
                         flag = 0;
                 }
                 else if (len - pos >= lent - i + 1) {
-                    if (s[len - (lent - i)] == '?' && good[t[i] - 'a'] == 0) 
+                    if (s[len - (lent - i)] == '?' && good[t[i] - 'a'] == 0)
                         flag = 0;
                     if (s[len - (lent - i)] != '?' && s[len - (lent - i)] != t[i])
                         flag = 0;
