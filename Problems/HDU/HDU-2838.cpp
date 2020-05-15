@@ -11,7 +11,7 @@ struct segtree {
     int val;
     long long sum;
     int lazy;
-}tree[N << 2];
+} tree[N << 2];
 
 void pushup(int rt) {
     tree[rt].val = tree[rt << 1].val + tree[rt << 1 | 1].val;

@@ -10,7 +10,7 @@ struct segtree {
     int l, r;
     int val;
     int lazy;
-}tree[N << 2];
+} tree[N << 2];
 
 struct star {
     int x, y;
@@ -19,7 +19,7 @@ struct star {
             return y < rhs.y;
         return x < rhs.x;
     }
-}a[N];
+} a[N];
 
 void pushup(int rt) {
     //do sth.
@@ -85,6 +85,6 @@ int main() {
         update(1, a[i].y, 1);
     }
     for (int i = 0; i < n; ++i)
-        printf("%d\n", ans[i]);    
+        printf("%d\n", ans[i]);
     return 0;
 }

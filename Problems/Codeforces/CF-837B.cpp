@@ -1,9 +1,9 @@
 //837B
-#include <bits/stdc++.h> 
+#include <bits/stdc++.h>
 using namespace std;
 
 const int N = 110;
- 
+
 int n, m;
 char s[N][N];
 char s2[N][N];
@@ -22,8 +22,8 @@ int check(int n, int m) {
                 return 0;
     return 1;
 }
- 
- 
+
+
 int main() {
     scanf("%d%d", &n, &m);
     for (int i = 0; i < n; ++i)

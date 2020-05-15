@@ -19,7 +19,7 @@ int main() {
     while (m--) {
         scanf("%d%d%d", &l, &r, &x);
         if (fa[l] == fa[r]) {
-            if (a[l] == x) 
+            if (a[l] == x)
                 puts("-1");
             else
                 printf("%d\n", l);
