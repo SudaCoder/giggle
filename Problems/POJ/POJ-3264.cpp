@@ -10,7 +10,7 @@ struct segtree {
     int l, r;
     int val[2];
     int lazy;
-}tree[N << 2];
+} tree[N << 2];
 
 void pushup(int rt) {
     //do sth.
@@ -66,7 +66,7 @@ int query1(int rt, int ql, int qr) {
 
 int main() {
     scanf("%d%d", &n, &m);
-    for (int i = 1; i <= n; ++i) 
+    for (int i = 1; i <= n; ++i)
         scanf("%d", &a[i]);
     build(1, 1, n);
     while (m--) {

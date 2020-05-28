@@ -37,7 +37,7 @@ int main() {
                 ans = mid;
                 r = mid - 1;
             }
-            else 
+            else
                 l = mid + 1;
         }
         printf("%d\n", ans);

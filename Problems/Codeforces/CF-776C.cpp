@@ -11,7 +11,7 @@ long long ans;
 
 int main() {
     scanf("%d%d", &n, &k);
-    for (int i = 1; i <= n; ++i) 
+    for (int i = 1; i <= n; ++i)
         scanf("%d", &a[i]);
     if (k == 1) {
         ks.push_back(k);
@@ -31,7 +31,7 @@ int main() {
     long long sum = 0;
     for (int i = 1; i <= n; ++i) {
         sum += a[i];
-        for (int j = 0;j < ks.size(); ++j) {
+        for (int j = 0; j < ks.size(); ++j) {
             if (cnt.count(sum - ks[j]))
                 ans += cnt[sum - ks[j]];
         }

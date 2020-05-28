@@ -11,7 +11,7 @@ struct segtree {
     int l, r;
     int val;
     int lazy;
-}tree[N << 2];
+} tree[N << 2];
 
 void pushup(int rt) {
     //do sth.
