@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
-#ifndef flyod_alg
-#define flyod_alg
+#ifndef floyd_alg
+#define floyd_alg
 
 template <typename T> void floyd(std::vector<std::vector<T>> &graph) {
   int n = graph.size();
@@ -14,4 +14,4 @@ template <typename T> void floyd(std::vector<std::vector<T>> &graph) {
   }
 }
 
-#endif
+#endif /* floyd_alg */
