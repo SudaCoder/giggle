@@ -1,9 +1,9 @@
 #include <iostream>
 #include <vector>
-#ifndef flyod_alg
-#define flyod_alg
+#ifndef floyd_alg
+#define floyd_alg
 
-template <typename T> void flyod(std::vector<std::vector<T>> &graph) {
+template <typename T> void floyd(std::vector<std::vector<T>> &graph) {
   int n = graph.size();
   for (int k = 0; k < n; k++) {
     for (int i = 0; i < n; i++) {
@@ -14,4 +14,4 @@ template <typename T> void flyod(std::vector<std::vector<T>> &graph) {
   }
 }
 
-#endif
+#endif /* floyd_alg */
